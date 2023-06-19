@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ProfessionalExperiencesComponent } from './professional-experiences/professional-experiences.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProfessionalExperiencesComponent
   ],
   imports: [
     BrowserModule,
