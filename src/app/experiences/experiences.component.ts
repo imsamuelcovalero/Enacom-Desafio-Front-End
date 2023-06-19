@@ -7,7 +7,7 @@ import { ExperienceService } from '../services/experience.service';
   styleUrls: ['./experiences.component.scss']
 })
 export class ExperiencesComponent implements OnInit {
-  experiences = [];
+  experiences: { company: string, location: string, role: string, duration: string, description: string }[] = [];
 
   constructor(private experienceService: ExperienceService) { }
 

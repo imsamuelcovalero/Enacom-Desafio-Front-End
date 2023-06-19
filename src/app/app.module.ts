@@ -2,21 +2,28 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { ProfessionalExperiencesComponent } from './professional-experiences/professional-experiences.component';
+import { FormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
+import { SearchComponent } from './helpers/search/search.component';
+import { SearchBarComponent } from './helpers/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfessionalExperiencesComponent
+    ExperiencesComponent,
+    SearchComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
