@@ -15,12 +15,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { SearchBarComponent } from './helpers/search-bar/search-bar.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExperiencesComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

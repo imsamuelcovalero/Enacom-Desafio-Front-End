@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienceService } from '../services/experience.service';
+import { ExperiencesService } from '../services/experiences.service';
 
 @Component({
   selector: 'app-experiences',
@@ -10,14 +10,14 @@ export class ExperiencesComponent implements OnInit {
   experiences: { company: string, location: string, role: string, duration: string, description: string }[] = [];
   searchTerm: any;
 
-  constructor(private experienceService: ExperienceService) { }
+  constructor(private experiencesService: ExperiencesService) { }
 
   ngOnInit(): void {
-    this.experiences = this.experienceService.getExperiences();
+    this.experiences = this.experiencesService.getExperiences();
   }
 
   applySearch(term: string): void {
-    this.experiences = this.experienceService.getExperiences().filter(experience =>
+    this.experiences = this.experiencesService.getExperiences().filter(experience =>
       experience.company.toLowerCase().includes(term.toLowerCase()) ||
       experience.location.toLowerCase().includes(term.toLowerCase()) ||
       experience.role.toLowerCase().includes(term.toLowerCase()) ||

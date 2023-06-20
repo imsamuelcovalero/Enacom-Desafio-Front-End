@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ExperiencesComponent } from './experiences.component';
-import { ExperienceService } from '../services/experience.service';
+import { ExperiencesService } from '../services/experiences.service';
 
 describe('ExperiencesComponent', () => {
   let component: ExperiencesComponent;
   let fixture: ComponentFixture<ExperiencesComponent>;
-  let experienceService: ExperienceService;
+  let experienceService: ExperiencesService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ExperiencesComponent],
-      providers: [ExperienceService]
+      providers: [ExperiencesService]
     })
       .compileComponents();
   });
@@ -18,7 +18,7 @@ describe('ExperiencesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ExperiencesComponent);
     component = fixture.componentInstance;
-    experienceService = TestBed.inject(ExperienceService);
+    experienceService = TestBed.inject(ExperiencesService);
     fixture.detectChanges();
   });
 
