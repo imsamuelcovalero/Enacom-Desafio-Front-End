@@ -7,7 +7,7 @@ export class ExperienceService {
   private experiences = [
     {
       company: 'Trybe',
-      location: 'São Paulo, SP',
+      location: 'Remoto',
       role: 'Summer Jobber',
       duration: 'JANEIRO DE 2023 – MARÇO DE 2023',
       description: `Responsável por revisar e aprimorar conteúdos, exercícios, aulas,

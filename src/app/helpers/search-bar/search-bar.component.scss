@@ -1,0 +1,27 @@
+/* File: src/app/helpers/search-bar/search-bar.component.scss */
+
+:host {
+  // border: 2px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  // border: 2px solid red;
+  transform: translateY(10px); // Para mover o input para baixo
+}
+
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+//   // border: 2px solid green;
+//   // centraliza os filhos verticalmente
+// }
+
+mat-form-field {
+  flex-grow: 1;
+}
+
+button {
+  margin-left: 10px;
+}
