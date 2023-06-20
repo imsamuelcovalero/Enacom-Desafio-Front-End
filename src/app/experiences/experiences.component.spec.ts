@@ -1,14 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ExperiencesComponent } from './experiences.component';
+import { ExperienceService } from '../services/experience.service';
 
 describe('ExperiencesComponent', () => {
   let component: ExperiencesComponent;
   let fixture: ComponentFixture<ExperiencesComponent>;
+  let experienceService: ExperienceService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ExperiencesComponent]
+      declarations: [ExperiencesComponent],
+      providers: [ExperienceService]
     })
       .compileComponents();
   });
@@ -16,10 +18,27 @@ describe('ExperiencesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ExperiencesComponent);
     component = fixture.componentInstance;
+    experienceService = TestBed.inject(ExperienceService);
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should load experiences on init', () => {
+    const experiencesSpy = spyOn(experienceService, 'getExperiences').and.callThrough();
+    component.ngOnInit();
+    expect(experiencesSpy).toHaveBeenCalled();
+    expect(component.experiences).toEqual(experienceService.getExperiences());
+  });
+
+  it('should filter experiences by search term', () => {
+    const searchTerm = 'Trybe';
+    component.applySearch(searchTerm);
+    const filteredExperiences = experienceService.getExperiences().filter(experience =>
+      experience.company.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    expect(component.experiences).toEqual(filteredExperiences);
   });
 });
