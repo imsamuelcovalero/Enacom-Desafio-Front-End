@@ -1,3 +1,4 @@
+/* File: src/app/experiences/experiences.component.spec.ts */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ExperiencesComponent } from './experiences.component';
 import { ExperiencesService } from '../services/experiences.service';

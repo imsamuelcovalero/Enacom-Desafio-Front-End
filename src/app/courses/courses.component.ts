@@ -10,7 +10,6 @@ export class CoursesComponent implements OnInit {
   courses: {
     institution: string,
     course: string,
-    status: string,
     period: string,
     skills: string[]
   }[] = [];
@@ -26,7 +25,6 @@ export class CoursesComponent implements OnInit {
     this.courses = this.coursesService.getCourses().filter(course =>
       course.institution.toLowerCase().includes(term.toLowerCase()) ||
       course.course.toLowerCase().includes(term.toLowerCase()) ||
-      course.status.toLowerCase().includes(term.toLowerCase()) ||
       course.period.toLowerCase().includes(term.toLowerCase()) ||
       course.skills.some(skill => skill.toLowerCase().includes(term.toLowerCase()))
     );
