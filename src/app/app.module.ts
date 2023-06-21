@@ -19,6 +19,7 @@ import { ExperiencesComponent } from './experiences/experiences.component';
 import { SearchBarComponent } from './helpers/search-bar/search-bar.component';
 import { CoursesComponent } from './courses/courses.component';
 import { LanguagesComponent } from './languages/languages.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LanguagesComponent } from './languages/languages.component';
     ExperiencesComponent,
     SearchBarComponent,
     CoursesComponent,
-    LanguagesComponent
+    LanguagesComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
