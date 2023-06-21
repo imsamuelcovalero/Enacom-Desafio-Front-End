@@ -61,6 +61,19 @@ export class LanguagesComponent implements OnInit {
     );
   }
 
+  proficiencyLevel(level: string) {
+    switch (level) {
+      case 'Iniciante':
+        return 33;
+      case 'Intermediário':
+        return 66;
+      case 'Avançado':
+        return 100;
+      default:
+        return 0;
+    }
+  }
+
   toggleTools(): void {
     const toolsSection = document.querySelector('.tools-section') as HTMLElement;
 

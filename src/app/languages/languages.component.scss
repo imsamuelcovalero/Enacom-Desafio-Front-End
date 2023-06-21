@@ -35,7 +35,7 @@
   gap: 20px;
 }
 
-.skill-card {
+.language-card {
   // border: 1px solid blue;
   display: flex;
   flex-direction: column;
@@ -101,13 +101,14 @@
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.language-mat-card-title,
+.language-mat-card-header,
 .framework-mat-card-header,
 .tech-card mat-card-header {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 5px;
 }
 
 .language-mat-card-title,
@@ -123,12 +124,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .language-mat-card-content p,
 .framework-mat-card-content p,
 .tech-card mat-card-content p {
   width: 100%;
+  margin-bottom: 1px;
 }
 
 .tech-section {

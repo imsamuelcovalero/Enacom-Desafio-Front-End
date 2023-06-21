@@ -6,7 +6,7 @@
 
   <!-- Linguagens de Programação -->
   <div class="skills-section">
-    <div *ngFor="let language of languages" class="skill-card">
+    <div *ngFor="let language of languages" class="language-card">
       <div class="card-wrapper">
         <div class="language-mat-card">
           <div class="language-mat-card-header">
@@ -15,49 +15,52 @@
 
           <div class="language-mat-card-content">
             <p><strong>Período:</strong> {{language.period}}</p>
-            <p><strong>Nível:</strong> {{language.level}}</p>
+            <p><strong>Proficiência:</strong></p>
+            <mat-progress-bar mode="determinate" [value]="proficiencyLevel(language.level)"></mat-progress-bar>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Frameworks -->
-    <div class="skills-section">
-      <div *ngFor="let framework of frameworks" class="framework-card">
-        <div class="card-wrapper">
-          <div class="framework-mat-card">
-            <div class="framework-mat-card-header">
-              <h2 class="framework-mat-card-title">{{framework.name}}</h2>
-            </div>
-
-            <div class="framework-mat-card-content">
-              <p><strong>Nível:</strong> {{framework.level}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ferramentas e Tecnologias -->
-    <div class="tech-section">
-      <div class="tech-card">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>Tecnologias, Ferramentas e Metodologias</mat-card-title>
-          </mat-card-header>
-
-          <mat-card-content>
-            <div class="tools-section">
-              <mat-list>
-                <mat-list-item *ngFor="let tool of tools">
-                  {{tool}}
-                </mat-list-item>
-              </mat-list>
-            </div>
-            <button mat-raised-button color="primary" class="tools-button"
-              (click)="toggleTools()">Expandir/Contrair</button>
-          </mat-card-content>
-        </mat-card>
       </div>
     </div>
   </div>
+
+  <!-- Frameworks -->
+  <div class="skills-section">
+    <div *ngFor="let framework of frameworks" class="framework-card">
+      <div class="card-wrapper">
+        <div class="framework-mat-card">
+          <div class="framework-mat-card-header">
+            <h2 class="framework-mat-card-title">{{framework.name}}</h2>
+          </div>
+
+          <div class="framework-mat-card-content">
+            <p><strong>Proficiência:</strong></p>
+            <mat-progress-bar mode="determinate" [value]="proficiencyLevel(framework.level)"></mat-progress-bar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ferramentas e Tecnologias -->
+  <div class="tech-section">
+    <div class="tech-card">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Tecnologias, Ferramentas e Metodologias</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="tools-section">
+            <mat-list>
+              <mat-list-item *ngFor="let tool of tools">
+                {{tool}}
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <button mat-raised-button color="primary" class="tools-button"
+            (click)="toggleTools()">Expandir/Contrair</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
