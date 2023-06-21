@@ -16,7 +16,7 @@ describe('LanguagesComponent', () => {
     mockFrameworksService = jasmine.createSpyObj(['getFrameworks']);
     mockToolsService = jasmine.createSpyObj(['getTools']);
 
-    // Configurando o retorno dos métodos dos serviços
+    // Configura o retorno dos métodos dos serviços
     mockLanguagesService.getLanguages.and.returnValue([
       { language: 'JavaScript', period: '1 Ano', level: 'Intermediário' },
       { language: 'TypeScript', period: '1 Ano', level: 'Intermediário' }
@@ -72,7 +72,7 @@ describe('LanguagesComponent', () => {
 
   describe('applySearch', () => {
     beforeEach(() => {
-      fixture.detectChanges(); // Precisamos chamar isso para inicializar nossos dados
+      fixture.detectChanges();
     });
 
     it('should filter languages correctly', () => {
