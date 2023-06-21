@@ -1,0 +1,237 @@
+/* File: src/app/languages/languages.component.scss */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+  background-color: #f3f3f3;
+  padding: 20px;
+  gap: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 30%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skills-section:not(:first-child) {
+  border-top: 1px solid #000;
+}
+
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.skill-card {
+  // border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-basis: calc(20% - 20px);
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-card .card-wrapper {
+  border: 1px solid red;
+  width: 160px;
+  height: 130px;
+}
+
+// .framework-card .card-wrapper {
+//   width: 125px;
+//   height: 115px;
+// }
+
+.framework-card {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-basis: calc(16% - 20px);
+  font-size: 0.7em;
+}
+
+.custom-mat-card {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 125px;
+  height: 115px;
+
+  /* Adicionando os estilos para imitar o mat-card */
+  padding: 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.custom-mat-card-header,
+.framework-card mat-card-header,
+.tech-card mat-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-mat-card-title,
+.skill-card mat-card-title,
+.tech-card mat-card-title {
+  width: 100%;
+}
+
+.custom-mat-card-content,
+.skill-card mat-card-content,
+.framework-card mat-card-content,
+.tech-card mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-mat-card-content p,
+.skill-card mat-card-content p,
+.framework-card mat-card-content p,
+.tech-card mat-card-content p {
+  width: 100%;
+}
+
+.tech-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #000;
+  width: 50%;
+  min-width: 300px;
+  margin: auto;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-basis: calc(100% - 20px);
+}
+
+.tools-section {
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (max-width: 745px) {
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .tech-card {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .skill-card .card-wrapper {
+    width: 120px;
+    height: 98px;
+  }
+
+  .framework-card .card-wrapper {
+    min-width: 94px;
+    width: 94px;
+    max-width: 94px;
+    height: 86px;
+  }
+
+  .custom-mat-card-title,
+  .skill-card mat-card-title,
+  .framework-card mat-card-title {
+    font-size: 0.8em;
+  }
+
+  .tech-card mat-card-title {
+    font-size: 1.2em;
+  }
+
+  .custom-mat-card-content,
+  .skill-card mat-card-content,
+  .framework-card mat-card-content {
+    font-size: 0.7em;
+  }
+}
+
+::ng-deep .tools-section mat-list mat-list-item .mat-list-item-content {
+  justify-content: center !important;
+}
+
+.tools-button {
+  display: block;
+  margin: 10px auto;
+}
+
+// .skill-card mat-card-header,
+// .framework-card mat-card-header,
+// .tech-card mat-card-header {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+// }
+
+// .skill-card mat-card-title,
+// .tech-card mat-card-title {
+//   width: 100%;
+// }
+
+// .framework-card mat-card-title {
+//   width: 100%;
+//   font-size: 1.1em;
+//   /* Ajuste o valor conforme a necessidade */
+// }
+
+// .skill-card mat-card-content,
+// .framework-card mat-card-content,
+// .tech-card mat-card-content {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   text-align: center;
+// }
+
+// .skill-card mat-card-content p,
+// .framework-card mat-card-content p,
+// .tech-card mat-card-content p {
+//   width: 100%;
+// }

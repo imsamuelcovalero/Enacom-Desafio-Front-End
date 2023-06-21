@@ -1,1 +1,64 @@
-<p>languages works!</p>
+<!-- File: src/app/skills/skills.component.html -->
+<div class="skills-container">
+  <h1 class="title">Competências</h1>
+
+  <app-search-bar class="search-bar" (searchTerm)="applySearch($event)"></app-search-bar>
+
+  <div class="skills-section">
+    <!-- Linguagens de Programação -->
+    <div class="skills-section">
+      <div *ngFor="let language of languages" class="skill-card">
+        <div class="card-wrapper">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{language.language}}</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p><strong>Período:</strong> {{language.period}}</p>
+              <p><strong>Nível:</strong> {{language.level}}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frameworks -->
+    <div class="skills-section">
+      <div *ngFor="let framework of frameworks" class="framework-card">
+        <div class="card-wrapper">
+          <div class="custom-mat-card">
+            <div class="custom-mat-card-header">
+              <h2 class="custom-mat-card-title">{{framework.name}}</h2>
+            </div>
+
+            <div class="custom-mat-card-content">
+              <p><strong>Nível:</strong> {{framework.level}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ferramentas e Tecnologias -->
+    <div class="tech-section">
+      <div class="tech-card">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Tecnologias, Ferramentas e Metodologias</mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content>
+            <div class="tools-section">
+              <mat-list>
+                <mat-list-item *ngFor="let tool of tools">
+                  {{tool}}
+                </mat-list-item>
+              </mat-list>
+            </div>
+            <button mat-raised-button color="primary" class="tools-button"
+              (click)="toggleTools()">Expandir/Contrair</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
