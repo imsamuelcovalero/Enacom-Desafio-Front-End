@@ -45,22 +45,6 @@
   flex-basis: calc(20% - 20px);
 }
 
-.card-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.skill-card .card-wrapper {
-  border: 1px solid red;
-  width: 160px;
-  height: 130px;
-}
-
-// .framework-card .card-wrapper {
-//   width: 125px;
-//   height: 115px;
-// }
-
 .framework-card {
   // border: 1px solid red;
   display: flex;
@@ -72,8 +56,33 @@
   font-size: 0.7em;
 }
 
-.custom-mat-card {
-  // border: 1px solid red;
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.language-mat-card {
+  // border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 160px;
+  height: 130px;
+
+  /* Adicionando os estilos para imitar o mat-card */
+  padding: 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.framework-mat-card {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,8 +101,8 @@
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.custom-mat-card-header,
-.framework-card mat-card-header,
+.language-mat-card-title,
+.framework-mat-card-header,
 .tech-card mat-card-header {
   display: flex;
   justify-content: center;
@@ -101,15 +110,14 @@
   text-align: center;
 }
 
-.custom-mat-card-title,
-.skill-card mat-card-title,
+.language-mat-card-title,
+.framework-mat-card-title,
 .tech-card mat-card-title {
   width: 100%;
 }
 
-.custom-mat-card-content,
-.skill-card mat-card-content,
-.framework-card mat-card-content,
+.language-mat-card-content,
+.framework-mat-card-content,
 .tech-card mat-card-content {
   display: flex;
   flex-direction: column;
@@ -117,9 +125,8 @@
   text-align: center;
 }
 
-.custom-mat-card-content p,
-.skill-card mat-card-content p,
-.framework-card mat-card-content p,
+.language-mat-card-content p,
+.framework-mat-card-content p,
 .tech-card mat-card-content p {
   width: 100%;
 }
@@ -152,6 +159,15 @@
   text-align: center;
 }
 
+::ng-deep .tools-section mat-list mat-list-item .mat-list-item-content {
+  justify-content: center !important;
+}
+
+.tools-button {
+  display: block;
+  margin: 10px auto;
+}
+
 @media screen and (max-width: 745px) {
   .search-bar {
     flex-direction: column;
@@ -163,20 +179,18 @@
 }
 
 @media screen and (max-width: 450px) {
-  .skill-card .card-wrapper {
+  .language-mat-card {
     width: 120px;
     height: 98px;
   }
 
-  .framework-card .card-wrapper {
-    min-width: 94px;
+  .framework-mat-card {
     width: 94px;
-    max-width: 94px;
     height: 86px;
   }
 
-  .custom-mat-card-title,
-  .skill-card mat-card-title,
+  .framework-mat-card-title,
+  .language-mat-card-title,
   .framework-card mat-card-title {
     font-size: 0.8em;
   }
@@ -185,53 +199,9 @@
     font-size: 1.2em;
   }
 
-  .custom-mat-card-content,
-  .skill-card mat-card-content,
+  .framework-mat-card-content,
+  .language-mat-card-content,
   .framework-card mat-card-content {
     font-size: 0.7em;
   }
 }
-
-::ng-deep .tools-section mat-list mat-list-item .mat-list-item-content {
-  justify-content: center !important;
-}
-
-.tools-button {
-  display: block;
-  margin: 10px auto;
-}
-
-// .skill-card mat-card-header,
-// .framework-card mat-card-header,
-// .tech-card mat-card-header {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   text-align: center;
-// }
-
-// .skill-card mat-card-title,
-// .tech-card mat-card-title {
-//   width: 100%;
-// }
-
-// .framework-card mat-card-title {
-//   width: 100%;
-//   font-size: 1.1em;
-//   /* Ajuste o valor conforme a necessidade */
-// }
-
-// .skill-card mat-card-content,
-// .framework-card mat-card-content,
-// .tech-card mat-card-content {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   text-align: center;
-// }
-
-// .skill-card mat-card-content p,
-// .framework-card mat-card-content p,
-// .tech-card mat-card-content p {
-//   width: 100%;
-// }
