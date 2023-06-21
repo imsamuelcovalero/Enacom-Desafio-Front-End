@@ -1,11 +1,11 @@
+/* File: src/app/interfaces/project.interface.ts */
 export interface IProject {
   id: number;
-  nome: string;
-  titulo: string;
+  name: string;
+  title: string;
   description: string;
-  imagem: string;
+  image: string;
   skills: string[];
-  stack: string;
   linkApp: string;
   linkGitHub: string;
 }

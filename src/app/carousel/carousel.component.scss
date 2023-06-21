@@ -1,0 +1,25 @@
+/* File: src/app/carousel/carousel.component.scss */
+
+/* Aplica estilos a todos os elementos com classe começando com 'owl-' */
+.owl-carousel .owl-nav [class^="owl-"] {
+  border: 1px solid red;
+  color: #FFF;
+  font-size: 14px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s; // Para efeito de transição suave
+}
+
+.owl-carousel .owl-nav [class^="owl-"]:hover {
+  border: 1px solid red;
+  background-color: #0066cc;
+}
+
+.owl-theme .owl-nav {
+  border: 1px solid red;
+  margin-top: 10px;
+  text-align: center;
+}

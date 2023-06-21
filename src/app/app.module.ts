@@ -13,6 +13,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppComponent } from './app.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
@@ -20,6 +23,9 @@ import { SearchBarComponent } from './helpers/search-bar/search-bar.component';
 import { CoursesComponent } from './courses/courses.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { ProjectComponent } from './project/project.component';
+import { CarouselBootstrapComponent } from './carousel-bootstrap/carousel-bootstrap.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,10 @@ import { ProjectsComponent } from './projects/projects.component';
     SearchBarComponent,
     CoursesComponent,
     LanguagesComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CarouselComponent,
+    ProjectComponent,
+    CarouselBootstrapComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,9 @@ import { ProjectsComponent } from './projects/projects.component';
     MatGridListModule,
     MatIconModule,
     MatListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    CarouselModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

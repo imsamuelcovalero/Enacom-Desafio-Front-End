@@ -1,3 +1,4 @@
+/* File: src/app/projects/projects.component.ts */
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../services/projects.service';
 import { IProject } from '../interfaces/project.interface';
@@ -9,11 +10,11 @@ import { IProject } from '../interfaces/project.interface';
 })
 export class ProjectsComponent implements OnInit {
 
-  projetos = [] as IProject[];
+  projects = [] as IProject[];
 
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
-    this.projetos = this.projectsService.getProjetos();
+    this.projects = this.projectsService.getProjetos();
   }
 }

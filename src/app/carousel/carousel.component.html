@@ -1,0 +1,8 @@
+<!-- File: src/app/carousel/carousel.component.html -->
+<owl-carousel-o [options]="carouselOptions">
+  <ng-container *ngFor="let project of projects">
+    <ng-template carouselSlide>
+      <app-project [project]="project"></app-project>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
