@@ -1,3 +1,4 @@
+/* File: src/app/services/languages/languages.service.ts */
 import { Injectable } from '@angular/core';
 
 @Injectable({
