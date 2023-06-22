@@ -16,6 +16,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
@@ -54,7 +55,8 @@ import { CarouselBootstrapComponent } from './carousel-bootstrap/carousel-bootst
     MatListModule,
     MatProgressBarModule,
     CarouselModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
