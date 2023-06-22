@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -27,6 +28,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProjectComponent } from './project/project.component';
 import { CarouselBootstrapComponent } from './carousel-bootstrap/carousel-bootstrap.component';
+import { ProjectCommentsComponent } from './project-commments/project-comments.component';
+import { CommentListComponent } from './project-commments/comment-list/comment-list.component';
+import { CommentFormComponent } from './project-commments/comment-form/comment-form.component';
+import { CommentComponent } from './project-commments/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,11 @@ import { CarouselBootstrapComponent } from './carousel-bootstrap/carousel-bootst
     ProjectsComponent,
     CarouselComponent,
     ProjectComponent,
-    CarouselBootstrapComponent
+    CarouselBootstrapComponent,
+    ProjectCommentsComponent,
+    CommentListComponent,
+    CommentFormComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +55,7 @@ import { CarouselBootstrapComponent } from './carousel-bootstrap/carousel-bootst
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,

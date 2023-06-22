@@ -9,3 +9,9 @@ export interface IProject {
   linkApp: string;
   linkGitHub: string;
 }
+
+export interface IComment {
+  projectId: string;
+  author?: string;
+  body: string;
+}

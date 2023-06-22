@@ -1,0 +1,14 @@
+<!-- File: src/app/project-comments/comment-form/comment-form.component.html -->
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nome:</label>
+    <input id="name" formControlName="name" type="text">
+  </div>
+
+  <div>
+    <label for="body">Comentário:</label>
+    <textarea id="body" formControlName="body" rows="4" required></textarea>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>
