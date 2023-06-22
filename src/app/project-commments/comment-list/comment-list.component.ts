@@ -1,5 +1,5 @@
 /* File: src/app/project-commments/comment-list/comment-list.component.ts */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IComment } from 'src/app/interfaces/project.interface';
 
 @Component({
@@ -8,13 +8,9 @@ import { IComment } from 'src/app/interfaces/project.interface';
   styleUrls: ['./comment-list.component.scss']
 })
 export class CommentListComponent implements OnInit {
-  comments: IComment[] = [];
+  @Input() comments: IComment[] = [];
 
   ngOnInit(): void {
     // sem código no momento
-  }
-
-  onCommentAdded(comment: IComment) {
-    this.comments.push(comment);
   }
 }

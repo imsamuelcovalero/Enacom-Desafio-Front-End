@@ -1,4 +1,9 @@
 <!-- File: src/app/project-comments/comment-list/comment-list.component.html -->
-<div *ngFor="let comment of comments">
-  <app-comment [comment]="comment"></app-comment>
+<div *ngIf="comments.length > 0; else noComments">
+  <div *ngFor="let comment of comments">
+    <app-comment [comment]="comment"></app-comment>
+  </div>
 </div>
+<ng-template #noComments>
+  <p>Ainda não foram feito comentários.</p>
+</ng-template>

@@ -9,7 +9,7 @@ import { IProject } from 'src/app/interfaces/project.interface';
   styleUrls: ['./comment-form.component.scss']
 })
 export class CommentFormComponent implements OnInit {
-  @Output() commentAdded = new EventEmitter<{ author: string, body: string, projectId: string }>();
+  @Output() commentAdded = new EventEmitter<{ author: string, body: string, projectId: number }>();
   @Input() project!: IProject;
   commentForm!: FormGroup;
 
@@ -22,7 +22,11 @@ export class CommentFormComponent implements OnInit {
 
   onSubmit() {
     if (this.commentForm.valid) {
+      console.log(this.commentForm.value);
+
       this.commentAdded.emit({ ...this.commentForm.value, projectId: this.project.id });
+      console.log('Comentário enviado!');
+
       this.commentForm.reset();
     }
   }

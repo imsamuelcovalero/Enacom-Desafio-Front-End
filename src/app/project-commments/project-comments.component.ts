@@ -1,7 +1,6 @@
 /* File: src/app/project-comments/project-comments.component.ts */
-import { Component, ViewChild, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IComment } from '../interfaces/project.interface';
-import { CommentListComponent } from './comment-list/comment-list.component';
 import { CommentsService } from '../services/comments.service';
 import { IProject } from '../interfaces/project.interface';
 
@@ -11,18 +10,21 @@ import { IProject } from '../interfaces/project.interface';
   styleUrls: ['./project-comments.component.scss']
 })
 export class ProjectCommentsComponent implements OnInit {
-  @ViewChild(CommentListComponent) commentList!: CommentListComponent;
   @Input() project!: IProject;
+  comments: IComment[] = [];
+  showForm = false; // Formulário não será mostrado por padrão
 
   constructor(private commentsService: CommentsService) { }
 
   ngOnInit(): void {
-    this.commentList.comments = this.commentsService.getComments(this.project.id);
+    this.comments = this.commentsService.getComments(this.project.id);
+    this.showForm = this.comments.length === 0; // Mostra o formulário se não houver comentários
   }
 
   onCommentAdded(comment: IComment) {
     comment.projectId = this.project.id;
     this.commentsService.addComment(comment);
-    this.commentList.comments = this.commentsService.getComments(this.project.id);
+    this.comments = this.commentsService.getComments(this.project.id);
+    this.showForm = false; // Esconde o formulário após o envio do comentário
   }
 }

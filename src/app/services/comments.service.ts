@@ -10,11 +10,15 @@ export class CommentsService {
 
   // constructor() { }
 
-  getComments(projectId: string): IComment[] {
+  getComments(projectId: number): IComment[] {
+    console.log('CommentsService.getComments()');
+
     return LocalStorageHelper.getComments(projectId);
   }
 
   addComment(comment: IComment): void {
+    console.log('CommentsService.addComment()');
+
     LocalStorageHelper.saveComments(comment);
   }
 }

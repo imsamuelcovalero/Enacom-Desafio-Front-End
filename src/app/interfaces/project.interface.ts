@@ -11,7 +11,7 @@ export interface IProject {
 }
 
 export interface IComment {
-  projectId: string;
+  projectId: number;
   author?: string;
   body: string;
 }

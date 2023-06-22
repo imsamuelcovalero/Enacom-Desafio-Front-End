@@ -3,14 +3,23 @@ import { IComment } from "src/app/interfaces/project.interface";
 
 
 export class LocalStorageHelper {
-  static getComments(projectId: string) {
-    const comments = localStorage.getItem('myPortfolioComments');
-    return comments ? JSON.parse(comments).filter((comment: IComment) => comment.projectId === projectId) : [];
+  static getComments(projectId: number) {
+    console.log('LocalStorageHelper.getComments()');
+
+    const allComments = localStorage.getItem('myPortfolioComments');
+    return allComments ? JSON.parse(allComments).filter((comment: IComment) => comment.projectId === projectId) : [];
   }
 
   static saveComments(comment: IComment) {
-    const comments = this.getComments(comment.projectId);
-    comments.push(comment);
-    localStorage.setItem('myPortfolioComments', JSON.stringify(comments));
+    console.log('LocalStorageHelper.saveComments()');
+
+    let allComments = localStorage.getItem('myPortfolioComments');
+    if (!allComments) {
+      allComments = '[]';  // Inicializa allComments como uma string de array vazia se for null
+    }
+
+    const commentsArray = JSON.parse(allComments);
+    commentsArray.push(comment);
+    localStorage.setItem('myPortfolioComments', JSON.stringify(commentsArray));
   }
 }

@@ -1,3 +1,6 @@
 <!-- File: src/app/project-comments/project-comments.component.html -->
-<app-comment-form (commentAdded)="onCommentAdded($event)"></app-comment-form>
-<app-comment-list></app-comment-list>
+<div class="project-comments-section">
+  <app-comment-form *ngIf="showForm" [project]="project" (commentAdded)="onCommentAdded($event)"></app-comment-form>
+  <app-comment-list [comments]="comments"></app-comment-list>
+  <button *ngIf="!showForm" (click)="showForm = true">Criar Comentário</button>
+</div>

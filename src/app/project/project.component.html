@@ -16,5 +16,11 @@
         <abbr title="Acesse o Código">Ver no GitHub</abbr>
       </a>
     </div>
+    <!-- Novo botão para exibir/esconder a seção de comentários -->
+    <button (click)="toggleComments()">
+      {{ showComments ? 'Esconder' : 'Ver' }} Comentários
+    </button>
+    <!-- Aqui é onde incluímos a seção de comentários, se showComments for true -->
+    <app-project-comments *ngIf="showComments" [project]="project"></app-project-comments>
   </div>
 </div>

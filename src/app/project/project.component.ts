@@ -11,10 +11,13 @@ export class ProjectComponent implements OnInit {
   @Input()
   project!: IProject;
 
-  // constructor() { }
+  showComments = false;
 
   ngOnInit(): void {
     // sem código no momento
   }
 
+  toggleComments() {
+    this.showComments = !this.showComments;
+  }
 }
