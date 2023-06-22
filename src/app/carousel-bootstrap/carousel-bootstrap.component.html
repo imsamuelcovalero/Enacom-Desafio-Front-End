@@ -1,15 +1,21 @@
 <!-- File: src/app/carousel-bootstrap/carousel-bootstrap.component.html -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <app-project *ngFor="let project of projects; let i = index" [project]="project"
-      [class.active]="i === currentProjectIndex" [class.d-none]="i !== currentProjectIndex"></app-project>
+    <div *ngFor="let project of projects; let i = index" [@slideIn]="currentProjectIndex"
+      [class.d-none]="i !== currentProjectIndex">
+      <app-project [project]="project"></app-project>
+    </div>
   </div>
   <a class="carousel-control-prev" (click)="movePrev()" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <mat-icon>arrow_back</mat-icon>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" (click)="moveNext()" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <mat-icon>arrow_forward</mat-icon>
     <span class="sr-only">Next</span>
   </a>
+  <div class="carousel-indicators">
+    <button *ngFor="let project of projects; let i = index" (click)="goToSlide(i)"
+      [class.active]="i === currentProjectIndex"></button>
+  </div>
 </div>

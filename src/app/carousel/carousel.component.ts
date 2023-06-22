@@ -1,50 +1,56 @@
 /* File: src/app/carousel/carousel.component.ts */
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IProject } from '../interfaces/project.interface';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-import { Subscription, fromEvent } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import {
+  trigger,
+  // state,
+  style,
+  animate,
+  transition,
+  // animation,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.scss'],
+  animations: [
+    trigger('slideIn', [
+      transition('* => *', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('600ms ease-in', style({ transform: 'translateX(0%)' }))
+      ])
+    ])
+  ]
 })
-export class CarouselComponent implements OnInit, OnDestroy {
+export class CarouselComponent implements OnInit {
+  @Input() projects: IProject[] = [];
 
-  @Input()
-  projects: IProject[] = [];
-
-  carouselOptions: OwlOptions = {
-    loop: true,
-    margin: 20,
-    nav: true,
-    items: 1,
-    mouseDrag: true,
-    touchDrag: false, // desativa o arrastar ao tocar na tela
-    navText: ['Anterior', 'Próximo'],
-    navSpeed: 700, // ajusta a velocidade de transição
-    dotsSpeed: 700, // ajusta a velocidade das bolinhas de navegação
-  };
-
-  private resizeSubscription: Subscription = new Subscription;
+  currentProjectIndex = 0;
 
   ngOnInit(): void {
-    this.resizeSubscription = fromEvent(window, 'resize')
-      .pipe(
-        debounceTime(500) // espera 500ms para evitar muitas chamadas durante o redimensionamento
-      )
-      .subscribe(() => this.refreshCarousel());
+    // sem código no momento
   }
 
-  ngOnDestroy(): void {
-    if (this.resizeSubscription) {
-      this.resizeSubscription.unsubscribe();
+  moveNext() {
+    if (this.currentProjectIndex < this.projects.length - 1) {
+      this.currentProjectIndex++;
+    } else {
+      // Quando chegar no fim, volta para o início
+      this.currentProjectIndex = 0;
     }
   }
 
-  private refreshCarousel(): void {
-    // força o recálculo do número de slides visíveis
-    this.carouselOptions = { ...this.carouselOptions };
+  movePrev() {
+    if (this.currentProjectIndex > 0) {
+      this.currentProjectIndex--;
+    } else {
+      // Quando chegar no início, vai para o fim
+      this.currentProjectIndex = this.projects.length - 1;
+    }
+  }
+
+  goToSlide(index: number) {
+    this.currentProjectIndex = index;
   }
 }

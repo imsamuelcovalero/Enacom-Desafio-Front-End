@@ -1,6 +1,6 @@
 /* File: src/app/carousel-bootstrap/carousel-bootstrap.component.scss */
 .carousel {
-  border: 1px solid green;
+  // border: 1px solid green;
   position: relative;
   width: 90%;
   height: 100%;
@@ -10,17 +10,15 @@
     // border: 1px solid blue;
     position: relative;
     margin: 0 auto;
-    width: 80%; // ajustado para ocupar toda a largura disponível em telas menores
-    max-width: 700px // @media (min-width: 768px) {
-    //   width: 80%; // ajustado para 80% em telas maiores
-    // }
+    width: 80%;
+    max-width: 700px
   }
 
   .carousel-control-prev,
   .carousel-control-next {
     width: 50px;
     height: 50px;
-    background: rgba(0, 0, 0, 0.5);
+    background: blue;
     border-radius: 50%;
     border: none;
     position: absolute;
@@ -41,13 +39,6 @@
     &:hover {
       background: rgba(0, 0, 0, 0.8);
     }
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-image: none;
-    color: #fff;
-    font-size: 2rem;
   }
 
   .carousel-indicators {
@@ -72,5 +63,26 @@
     @media (min-width: 768px) {
       max-width: 60%;
     }
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+  .carousel-indicators button.active {
+    background-color: blue;
   }
 }

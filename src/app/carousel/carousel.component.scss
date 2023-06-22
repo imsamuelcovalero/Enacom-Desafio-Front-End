@@ -1,25 +1,88 @@
 /* File: src/app/carousel/carousel.component.scss */
+.carousel {
+  // border: 1px solid green;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
 
-/* Aplica estilos a todos os elementos com classe começando com 'owl-' */
-.owl-carousel .owl-nav [class^="owl-"] {
-  border: 1px solid red;
-  color: #FFF;
-  font-size: 14px;
-  padding: 4px 7px;
-  background: #D6D6D6;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: background-color 0.3s; // Para efeito de transição suave
-}
+  .carousel-inner {
+    // border: 1px solid blue;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 700px
+  }
 
-.owl-carousel .owl-nav [class^="owl-"]:hover {
-  border: 1px solid red;
-  background-color: #0066cc;
-}
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: blue;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: calc(50% - 25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 
-.owl-theme .owl-nav {
-  border: 1px solid red;
-  margin-top: 10px;
-  text-align: center;
+    &.carousel-control-prev {
+      left: 10px;
+    }
+
+    &.carousel-control-next {
+      right: 10px;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #000;
+  }
+
+  .carousel-item {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      max-width: 60%;
+    }
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+  .carousel-indicators button.active {
+    background-color: blue;
+  }
 }

@@ -1,12 +1,12 @@
 /* File: src/app/project/project.component.scss */
 
 .project {
-  border: 1px solid red; // apenas para teste
+  // border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // border: 1px solid #ccc;
+  border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5px;
   margin: 60px;
@@ -26,6 +26,11 @@
   border: 1px solid #ccc;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+
+  @media (max-width: 815px) {
+    max-width: 90%;
+    height: auto;
+  }
 }
 
 .project-info {
@@ -67,4 +72,29 @@
 
 .project-links a:hover {
   text-decoration: underline;
+}
+
+abbr[title] {
+  border-bottom: none !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+abbr[title]:hover {
+  text-decoration: underline;
+}
+
+abbr[title]:hover::after {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #333;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 0.5em;
+  border-radius: 5px;
+  pointer-events: none;
 }

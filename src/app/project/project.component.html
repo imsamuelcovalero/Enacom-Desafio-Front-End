@@ -1,5 +1,5 @@
 <!-- File: src/app/project/project.component.html -->
-<div class="project">
+<!-- <div class="project">
   <img [src]="project.image" alt="{{project.name}}" class="project-image">
   <div class="project-info">
     <h2>{{ project.name }}</h2>
@@ -11,6 +11,26 @@
     <div class="project-links">
       <a [href]="project.linkApp" target="_blank">Acessar App</a>
       <a [href]="project.linkGitHub" target="_blank">Ver no GitHub</a>
+    </div>
+  </div>
+</div> -->
+
+<div class="project">
+  <img [src]="project.image" alt="{{project.name}}" class="project-image">
+  <div class="project-info">
+    <h2>{{ project.name }}</h2>
+    <p class="project-description">{{ project.description }}</p>
+    <div class="project-skills">
+      <h3>Tecnologias</h3>
+      <p>{{ project.skills.join(', ') }}</p>
+    </div>
+    <div class="project-links">
+      <a [href]="project.linkApp" target="_blank">
+        <abbr title="Teste a Aplicação">Acessar App</abbr>
+      </a>
+      <a [href]="project.linkGitHub" target="_blank">
+        <abbr title="Acesse o Código">Ver no GitHub</abbr>
+      </a>
     </div>
   </div>
 </div>

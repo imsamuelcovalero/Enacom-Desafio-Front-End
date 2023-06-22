@@ -1,6 +1,6 @@
 /* File: src/app/projects/projects.component.scss */
 .projects-container {
-  border: 2px solid red;
+  // border: 2px solid red;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -9,7 +9,6 @@
 .projects-section {
   // border: 2px solid blue;
   padding: 2em;
-  // height: calc(100vh - 64px); // diminuímos a altura em 64px, que é a altura padrão da MatToolbar
   height: 100vh;
   box-sizing: border-box;
 }
@@ -19,9 +18,3 @@ mat-toolbar {
   justify-content: center;
   margin-top: 60px;
 }
-
-// .title {
-//   font-size: 2em;
-//   margin-bottom: 40px;
-//   text-align: center; // adicionamos o alinhamento do texto ao centro
-// }
