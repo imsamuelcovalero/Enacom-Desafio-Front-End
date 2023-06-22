@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 const IMAGES_URL = 'assets/images'; // Caminho corrigido para as imagens
 
-const projetos = [
+const projects = [
   {
     id: 1,
     name: 'Trybetunes',
@@ -63,7 +63,7 @@ export class ProjectsService {
 
   // constructor() { }
 
-  getProjetos() {
-    return projetos;
+  getProjects() {
+    return projects;
   }
 }

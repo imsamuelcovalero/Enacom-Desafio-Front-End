@@ -1,7 +1,20 @@
 /* File: src/app/carousel-bootstrap/carousel-bootstrap.component.scss */
 .carousel {
+  border: 1px solid green;
   position: relative;
-  width: 100%;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+
+  .carousel-inner {
+    // border: 1px solid blue;
+    position: relative;
+    margin: 0 auto;
+    width: 80%; // ajustado para ocupar toda a largura disponível em telas menores
+    max-width: 700px // @media (min-width: 768px) {
+    //   width: 80%; // ajustado para 80% em telas maiores
+    // }
+  }
 
   .carousel-control-prev,
   .carousel-control-next {

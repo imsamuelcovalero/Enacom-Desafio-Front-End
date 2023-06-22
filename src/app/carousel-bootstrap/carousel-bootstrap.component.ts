@@ -19,12 +19,18 @@ export class CarouselBootstrapComponent implements OnInit {
   moveNext() {
     if (this.currentProjectIndex < this.projects.length - 1) {
       this.currentProjectIndex++;
+    } else {
+      // Quando chegar no fim, volta para o início
+      this.currentProjectIndex = 0;
     }
   }
 
   movePrev() {
     if (this.currentProjectIndex > 0) {
       this.currentProjectIndex--;
+    } else {
+      // Quando chegar no início, volta para o fim
+      this.currentProjectIndex = this.projects.length - 1;
     }
   }
 }

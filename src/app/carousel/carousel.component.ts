@@ -20,6 +20,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
     margin: 20,
     nav: true,
     items: 1,
+    mouseDrag: true,
     touchDrag: false, // desativa o arrastar ao tocar na tela
     navText: ['Anterior', 'Próximo'],
     navSpeed: 700, // ajusta a velocidade de transição
