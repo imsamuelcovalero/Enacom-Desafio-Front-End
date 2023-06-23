@@ -1,0 +1,10 @@
+<!-- File: src/app/carousel/project-wrapper/project-wrapper.component.html -->
+<div class="project-wrapper">
+  <app-project [project]="project"></app-project>
+  <div class="comment-button">
+    <button mat-raised-button color="accent" (click)="toggleComments()">
+      {{ showComments ? 'Esconder' : 'Ver' }} Comentários
+    </button>
+  </div>
+  <app-project-comments *ngIf="showComments" [project]="project"></app-project-comments>
+</div>

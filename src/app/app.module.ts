@@ -32,6 +32,7 @@ import { ProjectCommentsComponent } from './project-commments/project-comments.c
 import { CommentListComponent } from './project-commments/comment-list/comment-list.component';
 import { CommentFormComponent } from './project-commments/comment-form/comment-form.component';
 import { CommentComponent } from './project-commments/comment/comment.component';
+import { ProjectWrapperComponent } from './carousel/project-wrapper/project-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { CommentComponent } from './project-commments/comment/comment.component'
     ProjectCommentsComponent,
     CommentListComponent,
     CommentFormComponent,
-    CommentComponent
+    CommentComponent,
+    ProjectWrapperComponent
   ],
   imports: [
     BrowserModule,
