@@ -1,6 +1,6 @@
 /* File: src/app/project/project.component.ts */
 import { Component, Input, OnInit } from '@angular/core';
-import { IProject } from '../interfaces/project.interface';
+import { IProject } from '../../../interfaces/project.interface';
 
 @Component({
   selector: 'app-project',

@@ -25,14 +25,13 @@ import { SearchBarComponent } from './helpers/search-bar/search-bar.component';
 import { CoursesComponent } from './courses/courses.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { ProjectComponent } from './project/project.component';
-import { CarouselBootstrapComponent } from './carousel-bootstrap/carousel-bootstrap.component';
-import { ProjectCommentsComponent } from './project-commments/project-comments.component';
-import { CommentListComponent } from './project-commments/comment-list/comment-list.component';
-import { CommentFormComponent } from './project-commments/comment-form/comment-form.component';
-import { CommentComponent } from './project-commments/comment/comment.component';
-import { ProjectWrapperComponent } from './carousel/project-wrapper/project-wrapper.component';
+import { CarouselComponent } from './projects/carousel/carousel.component';
+import { ProjectComponent } from './projects/carousel/project/project.component';
+import { ProjectWrapperComponent } from './projects/carousel/project-wrapper/project-wrapper.component';
+import { ProjectCommentsComponent } from './projects/project-commments/project-comments.component';
+import { CommentListComponent } from './projects/project-commments/comment-list/comment-list.component';
+import { CommentFormComponent } from './projects/project-commments/comment-form/comment-form.component';
+import { CommentComponent } from './projects/project-commments/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ import { ProjectWrapperComponent } from './carousel/project-wrapper/project-wrap
     ProjectsComponent,
     CarouselComponent,
     ProjectComponent,
-    CarouselBootstrapComponent,
     ProjectCommentsComponent,
     CommentListComponent,
     CommentFormComponent,
