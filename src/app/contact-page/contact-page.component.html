@@ -5,6 +5,7 @@
   </mat-toolbar>
 
   <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form">
+    <h3>Me envie uma mensagem:</h3>
     <mat-form-field appearance="outline">
       <mat-label>Name</mat-label>
       <input matInput formControlName="name" required>
