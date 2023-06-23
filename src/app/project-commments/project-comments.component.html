@@ -1,7 +1,8 @@
 <!-- File: src/app/project-comments/project-comments.component.html -->
 <div class="project-comments-section">
-  <app-comment-form *ngIf="showForm" [project]="project" (commentAdded)="onCommentAdded($event)" (cancel)="onCancel()">
-  </app-comment-form>
   <app-comment-list [comments]="comments"></app-comment-list>
-  <button *ngIf="!showForm" (click)="showForm = true">Criar Comentário</button>
+  <app-comment-form *ngIf="showForm" [project]="project" (commentAdded)="onCommentAdded($event)"
+    (cancel)="onCancel()"></app-comment-form>
+  <button *ngIf="!showForm" mat-raised-button color="primary" class="create-comment-button"
+    (click)="showForm = true">Criar Comentário</button>
 </div>

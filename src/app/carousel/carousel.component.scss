@@ -1,17 +1,17 @@
 /* File: src/app/carousel/carousel.component.scss */
 .carousel {
-  border: 1px solid green;
+  // border: 1px solid green;
   position: relative;
   width: 90%;
   height: 100%;
   margin: 0 auto;
 
   .carousel-inner {
-    border: 1px solid blue;
+    // border: 1px solid blue;
     position: relative;
     margin: 0 auto;
-    width: 80%;
-    max-width: 700px;
+    width: 90%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,34 +46,14 @@
   }
 
   .carousel-indicators {
-    position: absolute;
-    bottom: 10px;
+    // border: 1px solid green;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .carousel-indicators li {
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-    background-color: #000;
-  }
-
-  .carousel-item {
-    text-align: center;
-    max-width: 80%;
-    margin: 0 auto;
-
-    @media (min-width: 768px) {
-      max-width: 60%;
-    }
-  }
-
-  .carousel-indicators {
+    margin: auto;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    margin: auto;
-    margin-top: 10px;
   }
 
   .carousel-indicators button {

@@ -1,4 +1,4 @@
-/* File: src/app/project-commments/project-comments.component.scss */
+/* File: src/app/project-comments/project-comments.component.scss */
 .project-comments-section {
   // border: 1px solid blue;
   padding: 20px;
@@ -6,4 +6,11 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
+  width: 100%;
+}
+
+.create-comment-button {
+  margin-top: 20px;
+  width: fit-content;
+  align-self: center;
 }
