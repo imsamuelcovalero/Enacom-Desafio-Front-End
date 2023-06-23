@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -32,6 +33,7 @@ import { ProjectCommentsComponent } from './projects/carousel/project-commments/
 import { CommentListComponent } from './projects/carousel/project-commments/comment-list/comment-list.component';
 import { CommentFormComponent } from './projects/carousel/project-commments/comment-form/comment-form.component';
 import { CommentComponent } from './projects/carousel/project-commments/comment/comment.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { CommentComponent } from './projects/carousel/project-commments/comment/
     CommentListComponent,
     CommentFormComponent,
     CommentComponent,
-    ProjectWrapperComponent
+    ProjectWrapperComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { CommentComponent } from './projects/carousel/project-commments/comment/
     MatProgressBarModule,
     CarouselModule,
     MatToolbarModule,
-    NgbModule
+    NgbModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

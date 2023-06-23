@@ -1,0 +1,54 @@
+<!-- File: src/app/contact-page/contact-page.component.html -->
+<div class="contact-container">
+  <mat-toolbar color="primary">
+    <span>Contact Me</span>
+  </mat-toolbar>
+
+  <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required>
+      <mat-error *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">
+        Please provide a valid email.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Subject</mat-label>
+      <input matInput formControlName="subject" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message</mat-label>
+      <textarea matInput formControlName="message" required></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">Submit</button>
+  </form>
+
+  <div class="contact-info">
+    <h2>Get in touch</h2>
+    <div>
+      <a href="https://www.linkedin.com/in/samuelcovalero/" target="_blank">
+        <mat-icon>linkedin</mat-icon>
+      </a>
+      <a href="https://github.com/imsamuelcovalero" target="_blank">
+        <mat-icon>github</mat-icon>
+      </a>
+      <a href="mailto: reis_samuel@hotmail.com" (click)="copyEmail()">
+        <mat-icon>email</mat-icon>
+      </a>
+      <a href="https://www.instagram.com/imsamuelcovalero/" target="_blank">
+        <mat-icon>instagram</mat-icon>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5511984478895" target="_blank" (click)="copyWhatsApp()">
+        <mat-icon>whatsapp</mat-icon>
+      </a>
+    </div>
+  </div>
+</div>
