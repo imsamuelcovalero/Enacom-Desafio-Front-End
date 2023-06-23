@@ -1,6 +1,6 @@
 /* File: src/app/carousel/carousel.component.ts */
 import { Component, Input, OnInit } from '@angular/core';
-import { IProject } from '../interfaces/project.interface';
+import { IProject } from '../../interfaces/project.interface';
 import {
   trigger,
   // state,

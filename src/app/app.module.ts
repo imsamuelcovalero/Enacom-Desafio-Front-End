@@ -28,10 +28,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { CarouselComponent } from './projects/carousel/carousel.component';
 import { ProjectComponent } from './projects/carousel/project/project.component';
 import { ProjectWrapperComponent } from './projects/carousel/project-wrapper/project-wrapper.component';
-import { ProjectCommentsComponent } from './projects/project-commments/project-comments.component';
-import { CommentListComponent } from './projects/project-commments/comment-list/comment-list.component';
-import { CommentFormComponent } from './projects/project-commments/comment-form/comment-form.component';
-import { CommentComponent } from './projects/project-commments/comment/comment.component';
+import { ProjectCommentsComponent } from './projects/carousel/project-commments/project-comments.component';
+import { CommentListComponent } from './projects/carousel/project-commments/comment-list/comment-list.component';
+import { CommentFormComponent } from './projects/carousel/project-commments/comment-form/comment-form.component';
+import { CommentComponent } from './projects/carousel/project-commments/comment/comment.component';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
 /* File: src/app/services/projects.service.ts */
 import { Injectable } from '@angular/core';
 
-const IMAGES_URL = 'assets/images'; // Caminho corrigido para as imagens
+const IMAGES_URL = 'assets/images';
 
 const projects = [
   {

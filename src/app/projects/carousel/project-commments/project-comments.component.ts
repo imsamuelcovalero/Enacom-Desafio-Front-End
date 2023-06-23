@@ -1,8 +1,8 @@
 /* File: src/app/project-comments/project-comments.component.ts */
 import { Component, OnInit, Input } from '@angular/core';
-import { IComment } from '../../interfaces/project.interface';
-import { CommentsService } from '../../services/comments.service';
-import { IProject } from '../../interfaces/project.interface';
+import { IComment } from '../../../interfaces/project.interface';
+import { CommentsService } from '../../../services/comments.service';
+import { IProject } from '../../../interfaces/project.interface';
 
 @Component({
   selector: 'app-project-comments',
