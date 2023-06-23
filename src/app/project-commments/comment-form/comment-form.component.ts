@@ -10,6 +10,7 @@ import { IProject } from 'src/app/interfaces/project.interface';
 })
 export class CommentFormComponent implements OnInit {
   @Output() commentAdded = new EventEmitter<{ author: string, body: string, projectId: number }>();
+  @Output() cancel = new EventEmitter<void>();
   @Input() project!: IProject;
   commentForm!: FormGroup;
 
@@ -29,5 +30,9 @@ export class CommentFormComponent implements OnInit {
 
       this.commentForm.reset();
     }
+  }
+
+  onCancel() {
+    this.cancel.emit();
   }
 }

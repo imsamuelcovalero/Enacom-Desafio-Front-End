@@ -1,14 +1,17 @@
 <!-- File: src/app/project-comments/comment-form/comment-form.component.html -->
-<form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">Nome:</label>
-    <input id="name" formControlName="author" type="text">
-  </div>
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit()" class="component-form-section">
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Comentário:</mat-label>
+    <textarea matInput id="body" formControlName="body" rows="5" required></textarea>
+  </mat-form-field>
 
-  <div>
-    <label for="body">Comentário:</label>
-    <textarea id="body" formControlName="body" rows="4" required></textarea>
-  </div>
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Nome:</mat-label>
+    <input matInput id="name" formControlName="author" type="text">
+  </mat-form-field>
 
-  <button type="submit">Enviar</button>
+  <div class="buttons">
+    <button mat-raised-button color="warn" type="button" (click)="onCancel()">Cancelar</button>
+    <button mat-raised-button color="primary" type="submit">Enviar</button>
+  </div>
 </form>

@@ -27,4 +27,8 @@ export class ProjectCommentsComponent implements OnInit {
     this.comments = this.commentsService.getComments(this.project.id);
     this.showForm = false; // Esconde o formulário após o envio do comentário
   }
+
+  onCancel() {
+    this.showForm = false; // Esconde o formulário quando o botão 'Cancelar' é clicado
+  }
 }

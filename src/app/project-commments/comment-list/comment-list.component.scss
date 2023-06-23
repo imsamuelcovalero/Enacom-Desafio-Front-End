@@ -1,1 +1,17 @@
-/* Adicione qualquer estilo específico para o componente de comentário aqui */
+/* File: src/app/project-commments/comment-list/comment-list.component.scss */
+.comment-list-section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 15px;
+
+  p {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    font-size: 1.1em;
+  }
+}
