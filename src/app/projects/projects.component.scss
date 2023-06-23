@@ -3,6 +3,7 @@
   // border: 2px solid red;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   height: 100vh;
 }
 
@@ -13,8 +14,14 @@
   box-sizing: border-box;
 }
 
-mat-toolbar {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
+.toolbar-content {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px; // Adicione esta linha para centralizar verticalmente o texto
 }
+
+// mat-toolbar {
+//   display: flex;
+//   justify-content: center;
+//   // margin-top: 60px;
+// }
