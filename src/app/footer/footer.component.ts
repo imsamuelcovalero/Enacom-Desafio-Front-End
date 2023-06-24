@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  versao = '';
+  versao = '1.0';
   contact = { name: '', tel: '', email: '' };
 
   constructor(
@@ -24,8 +24,14 @@ export class FooterComponent implements OnInit {
   getInfosAPI(): void {
     this.appService.getInfosAPI().subscribe({
       next: (data) => {
-        this.versao = data.versao;
-        this.contact = data.contact;
+        console.log('Informações da API obtidas com sucesso!', data);
+
+        if (data.versao) {
+          this.versao = data.versao;
+        }
+        if (data.contact) {
+          this.contact = data.contact;
+        }
         // this.toastr.success('Informações da API obtidas com sucesso!');
       },
       error: (error) => {
