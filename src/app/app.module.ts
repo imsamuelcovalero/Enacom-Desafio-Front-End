@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +35,7 @@ import { CommentListComponent } from './projects/carousel/project-commments/comm
 import { CommentFormComponent } from './projects/carousel/project-commments/comment-form/comment-form.component';
 import { CommentComponent } from './projects/carousel/project-commments/comment/comment.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     CommentFormComponent,
     CommentComponent,
     ProjectWrapperComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     CarouselModule,
     MatToolbarModule,
     NgbModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
