@@ -12,7 +12,7 @@
   z-index: 9999;
 
   .footer-card {
-    // border: 1px solid red
+    // border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +49,23 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+    }
+  }
+
+  @media (max-width: 690px) {
+    .footer-card {
+      // border: 1px solid blue;
+      justify-content: center;
+      height: 80px;
+      // ajunta mais o conteúdo verticalmente
+
+      .contact-item {
+        margin: 1em 0;
+      }
+
+      .content-row {
+        justify-content: center;
+      }
     }
   }
 }
