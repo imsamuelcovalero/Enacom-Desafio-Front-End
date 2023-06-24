@@ -1,22 +1,26 @@
 <!-- File: src/app/experiences/experiences.component.html -->
-<div class="experience-container">
-  <h1 class="title">Experiências Profissionais</h1>
+<div class="experience-external-container">
+  <mat-toolbar color="primary">
+    <span>Experiências Profissionais</span>
+  </mat-toolbar>
+  <div class="experience-container">
 
-  <app-search-bar class="search-bar" (searchTerm)="applySearch($event)"></app-search-bar>
+    <app-search-bar class="search-bar" (searchTerm)="applySearch($event)"></app-search-bar>
 
-  <div class="experience-section">
-    <div *ngFor="let experience of experiences" class="experience-card">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>{{experience.company}}</mat-card-title>
-          <mat-card-subtitle>{{experience.role}}, {{experience.location}}</mat-card-subtitle>
-        </mat-card-header>
+    <div class="experience-section">
+      <div *ngFor="let experience of experiences" class="experience-card">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{experience.company}}</mat-card-title>
+            <mat-card-subtitle>{{experience.role}}, {{experience.location}}</mat-card-subtitle>
+          </mat-card-header>
 
-        <mat-card-content>
-          <p><strong>Duration:</strong> {{experience.duration}}</p>
-          <p><strong>Description:</strong> {{experience.description}}</p>
-        </mat-card-content>
-      </mat-card>
+          <mat-card-content>
+            <p><strong>Duration:</strong> {{experience.duration}}</p>
+            <p><strong>Description:</strong> {{experience.description}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>

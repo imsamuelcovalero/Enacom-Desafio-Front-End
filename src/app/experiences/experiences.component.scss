@@ -1,4 +1,14 @@
 /* File: src/app/experiences/experiences.component.scss */
+.experience-external-container {
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
 .experience-container {
   // border: 1px solid blue;
   display: flex;
