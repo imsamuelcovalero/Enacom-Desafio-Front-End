@@ -5,12 +5,13 @@
   flex-direction: column;
   justify-content: flex-start;
   height: 100vh;
+  margin-bottom: 60px; // Adicione esta linha para evitar que o rodapé cubra o conteúdo
 }
 
 .projects-section {
   // border: 2px solid blue;
-  padding: 2em;
-  height: 100vh;
+  // padding: 0.8em;
+  height: 90%;
   box-sizing: border-box;
 }
 

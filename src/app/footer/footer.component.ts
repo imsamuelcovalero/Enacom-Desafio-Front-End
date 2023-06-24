@@ -26,7 +26,7 @@ export class FooterComponent implements OnInit {
       next: (data) => {
         this.versao = data.versao;
         this.contact = data.contact;
-        this.toastr.success('Informações da API obtidas com sucesso!');
+        // this.toastr.success('Informações da API obtidas com sucesso!');
       },
       error: (error) => {
         console.error('Erro ao buscar informações da API', error);

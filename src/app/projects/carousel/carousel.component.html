@@ -3,12 +3,12 @@
   <div class="carousel-inner">
     <div *ngFor="let project of projects; let i = index" [@slideIn]="currentProjectIndex"
       [class.d-none]="i !== currentProjectIndex">
-      <app-project-wrapper [project]="project"></app-project-wrapper> <!-- substituído aqui -->
-      <div class="carousel-indicators">
-        <button *ngFor="let project of projects; let i = index" (click)="goToSlide(i)"
-          [class.active]="i === currentProjectIndex"></button>
-      </div>
+      <app-project-wrapper [project]="project"></app-project-wrapper>
     </div>
+  </div>
+  <div class="carousel-indicators">
+    <button *ngFor="let project of projects; let i = index" (click)="goToSlide(i)"
+      [class.active]="i === currentProjectIndex"></button>
   </div>
   <a class="carousel-control-prev" (click)="movePrev()" role="button" data-slide="prev">
     <mat-icon>arrow_back</mat-icon>

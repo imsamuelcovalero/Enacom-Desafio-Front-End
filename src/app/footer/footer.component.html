@@ -1,9 +1,20 @@
 <!-- File: src/app/footer/footer.component.html -->
-<mat-card class="footer-section">
-  <mat-card-content>
-    <h2 class="mat-title">Contato</h2>
-    <p><mat-icon>person</mat-icon> Nome: {{contact.name}}</p>
-    <p><mat-icon>email</mat-icon> Email: {{contact.email}}</p>
-    <p><mat-icon>phone</mat-icon> Telefone: {{contact.tel}}</p>
-  </mat-card-content>
-</mat-card>
+<div class="footer-section">
+  <mat-card class="footer-card">
+    <mat-card-content class="content-row">
+      <p class="contact-title">Contato</p> <!-- Substituído h2 por p e adicionado uma classe -->
+      <div class="contact-item">
+        <mat-icon>person</mat-icon>
+        <p>Nome: {{contact.name}}</p>
+      </div>
+      <div class="contact-item">
+        <mat-icon>email</mat-icon>
+        <p>Email: {{contact.email}}</p>
+      </div>
+      <div class="contact-item">
+        <mat-icon>phone</mat-icon>
+        <p>Telefone: {{contact.tel}}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
