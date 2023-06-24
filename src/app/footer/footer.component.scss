@@ -20,17 +20,18 @@
     height: 100%;
     padding: 1em;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-    background-color: inherit; // herda a cor de fundo do pai
+    background-color: inherit;
+    border-top: 1px solid #ccc;
 
     .contact-title {
-      font-weight: bold; // Adicione o peso da fonte que você preferir
-      font-size: 20px; // Adicione o tamanho de fonte que você preferir
-      margin: 0; // Remove a margem padrão
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0;
     }
 
     .contact-item {
       display: flex;
-      align-items: center; // Isso centralizará os itens ao longo do eixo transversal
+      align-items: center;
       margin: 0 1em;
 
       mat-icon {
@@ -38,7 +39,7 @@
       }
 
       p {
-        margin: 0; // Sobrescreve a margem padrão
+        margin: 0;
       }
     }
 
