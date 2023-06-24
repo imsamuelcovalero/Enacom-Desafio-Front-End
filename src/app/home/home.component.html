@@ -1,0 +1,29 @@
+<!-- File: src/app/home/home.component.html -->
+<div class="home-page-container">
+  <mat-toolbar color="primary">
+    <span>Bem-vindo ao Portfólio de Samuel Covalero dos Reis!</span>
+  </mat-toolbar>
+  <div class="home-page">
+    <mat-card class="home-card">
+      <!-- <mat-card-header>
+        <mat-card-title>
+          <h2>Bem-vindo ao Portfólio de Samuel Covalero dos Reis!</h2>
+        </mat-card-title>
+      </mat-card-header> -->
+      <img mat-card-image src="assets/images/myPicture.png" alt="Imagem de Samuel Covalero dos Reis">
+      <mat-card-content class="home-content">
+        <p>
+          Explore meu trabalho, habilidades e experiências navegando pelas páginas do meu portfólio.
+          Você pode utilizar o menu abaixo ou a navegação no cabeçalho do site.
+        </p>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="['/experiences']">Experiências</a>
+          <a mat-list-item [routerLink]="['/courses']">Cursos</a>
+          <a mat-list-item [routerLink]="['/languages']">Idiomas</a>
+          <a mat-list-item [routerLink]="['/projects']">Projetos</a>
+          <a mat-list-item [routerLink]="['/contact']">Contato</a>
+        </mat-nav-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

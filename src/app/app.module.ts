@@ -36,6 +36,7 @@ import { CommentFormComponent } from './projects/carousel/project-commments/comm
 import { CommentComponent } from './projects/carousel/project-commments/comment/comment.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { FooterComponent } from './footer/footer.component';
     CommentComponent,
     ProjectWrapperComponent,
     ContactPageComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
