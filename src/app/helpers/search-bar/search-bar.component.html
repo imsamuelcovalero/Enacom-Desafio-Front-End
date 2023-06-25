@@ -1,7 +1,8 @@
 <!--File: src/app/helpers/search-bar/search-bar.component.html -->
 <mat-form-field appearance="outline" class="search-bar-field">
   <mat-label>Entre com a palavra-chave</mat-label>
-  <input matInput [(ngModel)]="currentTerm">
+  <input matInput [(ngModel)]="currentTerm" (ngModelChange)="search(currentTerm)">
 </mat-form-field>
-<button mat-raised-button color="primary" class="search-bar-button"
-  (click)="search()"><mat-icon>search</mat-icon></button>
+<button mat-raised-button color="primary" class="search-bar-button">
+  <mat-icon>search</mat-icon>
+</button>

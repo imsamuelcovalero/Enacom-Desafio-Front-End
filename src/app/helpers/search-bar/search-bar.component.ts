@@ -1,3 +1,4 @@
+/* File: src/app/home/home.component.ts */
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -10,7 +11,8 @@ export class SearchBarComponent {
 
   currentTerm = '';
 
-  search(): void {
+  search(term: string): void {
+    this.currentTerm = term;
     this.searchTerm.emit(this.currentTerm);
   }
 }

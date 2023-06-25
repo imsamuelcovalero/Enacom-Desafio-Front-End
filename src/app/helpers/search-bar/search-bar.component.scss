@@ -13,13 +13,13 @@
   transform: translateY(10px); // Para mover o input para baixo
 }
 
-// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
-//   // border: 2px solid green;
-//   // centraliza os filhos verticalmente
-// }
-
 mat-form-field {
   flex-grow: 1;
+
+  .mat-form-field-label,
+  .mat-input-element {
+    color: var(--input-text);
+  }
 }
 
 button {
