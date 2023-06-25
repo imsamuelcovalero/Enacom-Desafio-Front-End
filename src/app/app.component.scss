@@ -56,3 +56,10 @@ body.light-theme .theme-icon {
 .app-container {
   padding-bottom: 40px;
 }
+
+@media (max-width: 600px) {
+
+  .left-items {
+    font-size: 0.8em;
+  }
+}
