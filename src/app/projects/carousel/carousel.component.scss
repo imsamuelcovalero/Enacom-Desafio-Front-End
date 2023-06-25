@@ -34,6 +34,11 @@
     &:hover {
       background: var(--tertiary);
     }
+
+    @media (max-width: 500px) {
+      top: unset;
+      bottom: 80px;
+    }
   }
 
   .carousel-control-prev {

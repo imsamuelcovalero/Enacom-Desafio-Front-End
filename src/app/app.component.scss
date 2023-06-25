@@ -70,3 +70,15 @@ body.light-theme .theme-icon {
     font-size: 0.8em;
   }
 }
+
+@media (max-width: 500px) {
+  .left-items {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 450px) {
+  .left-items {
+    font-size: 0.6em;
+  }
+}

@@ -1,6 +1,7 @@
 /*  File: src/app/home/home.component.scss */
 .home-page-container {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,5 +89,23 @@ mat-toolbar {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  mat-toolbar {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  mat-toolbar {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  mat-toolbar {
+    font-size: 0.8em;
   }
 }

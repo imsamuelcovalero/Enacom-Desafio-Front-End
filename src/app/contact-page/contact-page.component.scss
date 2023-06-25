@@ -4,8 +4,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
   background-color: var(--background);
+  height: 100vh; // faça o container ocupar a tela inteira
+  overflow-y: auto; // permita rolagem vertical se o conteúdo for muito alto
 
   .contact-form {
     border: 1px solid var(--input-border);
@@ -14,11 +15,11 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 600px;
-    height: 570px;
-    margin-top: 2em;
+    height: auto;
+    overflow: auto;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: var(--input-background);
 
@@ -26,10 +27,20 @@
       color: var(--text-title);
       margin-top: 0.5em;
       margin-bottom: 0.5em;
+      text-align: center;
+      word-wrap: break-word;
+
+      @media (max-width: 500px) {
+        font-size: 1.4em;
+      }
     }
 
     button {
       margin-top: 0.1em;
+    }
+
+    @media (max-width: 500px) {
+      max-height: 60vh; // altere o valor conforme a necessidade
     }
   }
 
