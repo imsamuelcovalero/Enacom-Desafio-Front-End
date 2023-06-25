@@ -1,14 +1,14 @@
 /* File: src/app/contact-page/contact-page.component.scss */
 .contact-container {
-  // border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
+  background-color: var(--background);
 
   .contact-form {
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -20,19 +20,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--input-background);
 
     h3 {
-      margin-top: 0.5em; // reduza a margem superior
-      margin-bottom: 0.5em; // reduza a margem inferior
+      color: var(--text-title);
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
     }
 
     button {
-      margin-top: 0.1em; // reduza a margem superior
+      margin-top: 0.1em;
     }
   }
 
   .contact-info {
-    // border: 1px solid green;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +41,8 @@
     margin-top: 2em;
 
     h2 {
-      margin-bottom: 1em;
+      color: var(--extra);
+      font-weight: 500;
     }
 
     div {
@@ -50,9 +52,13 @@
       max-width: 300px;
 
       a {
-        color: inherit;
+        color: var(--button-border);
         text-decoration: none;
         font-size: 1.5em;
+      }
+
+      .icon {
+        color: var(--tertiary);
       }
     }
   }
@@ -67,12 +73,24 @@ mat-toolbar {
 }
 
 mat-form-field {
-  // border: 1px solid green;
   width: 100%;
-  margin-bottom: 0.2em; // reduza a margem inferior
-  // height: 90%;
+  margin-bottom: 0.2em;
 }
 
 button {
   margin-top: 1em;
+  color: var(--button-text);
+  background-color: var(--button-background);
+
+  &:hover {
+    background-color: var(--button-hover);
+  }
+
+  &:active {
+    background-color: var(--button-active);
+  }
+
+  &:disabled {
+    background-color: var(--button-disabled-background);
+  }
 }
