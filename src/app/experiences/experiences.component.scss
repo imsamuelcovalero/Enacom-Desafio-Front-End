@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   margin: auto;
+  background-color: var(--background);
 }
 
 mat-toolbar {
@@ -24,7 +25,7 @@ mat-toolbar {
   min-height: 100vh;
   width: 80%;
   margin: auto;
-  background-color: #f3f3f3;
+  background-color: var(--background);
   padding: 20px;
   gap: 20px;
 }
@@ -55,8 +56,35 @@ mat-toolbar {
 .experience-card {
   // border: 1px solid red;
   flex-basis: calc(33.33% - 20px);
-  /* 33.33% para 3 cards por linha, reduzir o valor para mais cards por linha */
   box-sizing: border-box;
+}
+
+strong {
+  color: var(--text-title);
+  font-size: 1.1em;
+}
+
+mat-card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  color: var(--paragraph);
+}
+
+mat-card-title {
+  color: var(--text-title);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+mat-card-subtitle {
+  color: var(--paragraph);
+  font-size: 1.2em;
+}
+
+mat-card-content {
+  color: var(--paragraph);
+  font-size: 1.1em;
 }
 
 @media screen and (max-width: 745px) {
