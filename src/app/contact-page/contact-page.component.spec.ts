@@ -4,10 +4,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { CopyService } from '../services/copy.service';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SuccessMessageService } from '../services/success-message.service';
 
 import { ContactPageComponent } from './contact-page.component';
+import { of } from 'rxjs';
 
 describe('ContactPageComponent', () => {
   let component: ContactPageComponent;
@@ -16,8 +19,25 @@ describe('ContactPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ContactPageComponent],
-      imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatSnackBarModule, ToastrModule.forRoot(), BrowserAnimationsModule],
-      providers: [CopyService]
+      imports: [
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSnackBarModule,
+        ToastrModule.forRoot(),
+        BrowserAnimationsModule,
+        RouterTestingModule
+      ],
+      providers: [
+        CopyService,
+        ToastrService,
+        {
+          provide: SuccessMessageService,
+          useValue: {
+            message: null
+          }
+        }
+      ]
     })
       .compileComponents();
   });
