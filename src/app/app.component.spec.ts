@@ -3,6 +3,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  let fixture;
+  let app: AppComponent;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -12,24 +15,34 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    app = fixture.componentInstance;
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  // it(`should have as title 'Enacom-Desafio-Front-End'`, () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.componentInstance;
-  //   expect(app.title).toEqual('Enacom-Desafio-Front-End');
-  // });
+  it('should toggle dark theme', () => {
+    expect(app.darkTheme).toBeFalse();
+    app.toggleTheme();
+    expect(app.darkTheme).toBeTrue();
+  });
 
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.nativeElement as HTMLElement;
-  //   expect(compiled.querySelector('.content span')?.textContent).toContain('Enacom-Desafio-Front-End app is running!');
-  // });
+  it('should set and get current page correctly', () => {
+    const testPage = '/testPage';
+    app.setCurrentPage(testPage);
+    expect(app.currentPage).toBe('testPage');
+  });
+
+  it('should show correct buttons', () => {
+    app.setCurrentPage('/home');
+    expect(app.showHomeButton).toBeFalse();
+    expect(app.showExperiencesButton).toBeTrue();
+
+    app.setCurrentPage('/experiences');
+    expect(app.showHomeButton).toBeTrue();
+    expect(app.showExperiencesButton).toBeFalse();
+  });
 });
