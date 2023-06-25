@@ -5,6 +5,12 @@
   height: 60px;
   padding: 0 !important;
   top: 0;
+  background-color: var(--header-background);
+  color: var(--header-text);
+}
+
+.mat-toolbar.mat-primary {
+  background-color: var(--header-background) !important;
 }
 
 .left-items,
@@ -23,18 +29,18 @@
 .app-button {
   border: none;
   background-color: transparent;
-  color: white;
+  color: var(--header-text);
   font-size: 1em;
   height: 100%;
   cursor: pointer;
   transition: color 0.3s ease; // Transição suave na cor
 
   &:hover {
-    color: lightgray;
+    color: var(--button-hover);
   }
 
   &:disabled {
-    color: gray;
+    color: var(--button-disabled-background);
     cursor: not-allowed;
   }
 }
@@ -46,19 +52,19 @@
 }
 
 body.dark-theme .theme-icon {
-  color: #fff; // A cor do ícone de tema escuro (lua) quando o tema escuro está ativo
+  color: var(--header-text); // A cor do ícone de tema escuro (lua) quando o tema escuro está ativo
 }
 
 body.light-theme .theme-icon {
-  color: #000; // A cor do ícone de tema claro (sol) quando o tema claro está ativo
+  color: var(--header-text); // A cor do ícone de tema claro (sol) quando o tema claro está ativo
 }
 
 .app-container {
   padding-bottom: 40px;
+  background-color: var(--background);
 }
 
 @media (max-width: 600px) {
-
   .left-items {
     font-size: 0.8em;
   }
