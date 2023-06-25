@@ -1,19 +1,21 @@
 <!-- File: src/app/app.component.html -->
-<mat-toolbar color="primary">
-  <div class="left-items">
-    <button class="app-button" [disabled]="!showHomeButton" (click)="goToHome()">Home</button>
-    <button class="app-button" [disabled]="!showExperiencesButton" (click)="goToExperiences()">Experiências</button>
-    <button class="app-button" [disabled]="!showCoursesButton" (click)="goToCourses()">Cursos</button>
-    <button class="app-button" [disabled]="!showLanguagesButton" (click)="goToLanguages()">Idiomas</button>
-    <button class="app-button" [disabled]="!showProjectsButton" (click)="goToProjects()">Projetos</button>
-    <button class="app-button" [disabled]="!showContactButton" (click)="goToContact()">Contato</button>
-  </div>
-  <div class="right-items">
-    <mat-icon class="theme-icon" (click)="toggleTheme()"
-      matTooltip="{{ darkTheme ? 'Mudar para tema claro' : 'Mudar para tema escuro' }}">
-      {{ darkTheme ? 'brightness_7' : 'brightness_3' }}
-    </mat-icon>
-  </div>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<div class="app-container">
+  <mat-toolbar color="primary">
+    <div class="left-items">
+      <button class="app-button" [disabled]="!showHomeButton" (click)="goToHome()">Home</button>
+      <button class="app-button" [disabled]="!showExperiencesButton" (click)="goToExperiences()">Experiências</button>
+      <button class="app-button" [disabled]="!showCoursesButton" (click)="goToCourses()">Cursos</button>
+      <button class="app-button" [disabled]="!showLanguagesButton" (click)="goToLanguages()">Linguagens</button>
+      <button class="app-button" [disabled]="!showProjectsButton" (click)="goToProjects()">Projetos</button>
+      <button class="app-button" [disabled]="!showContactButton" (click)="goToContact()">Contato</button>
+    </div>
+    <div class="right-items">
+      <mat-icon class="theme-icon" (click)="toggleTheme()"
+        matTooltip="{{ darkTheme ? 'Mudar para tema claro' : 'Mudar para tema escuro' }}">
+        {{ darkTheme ? 'brightness_7' : 'brightness_3' }}
+      </mat-icon>
+    </div>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</div>
 <app-footer></app-footer>y

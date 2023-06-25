@@ -1,4 +1,58 @@
 /* File: src/app/app.component.scss */
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 !important;
+  top: 0;
+}
+
+.left-items,
+.right-items {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Espaço adicional entre os botões de trocar tema e logout */
+.right-items .theme-icon {
+  margin-right: 1rem; // Ajuste este valor conforme necessário
+}
+
+/* Estilização dos botões */
+.app-button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+  height: 100%;
+  cursor: pointer;
+  transition: color 0.3s ease; // Transição suave na cor
+
+  &:hover {
+    color: lightgray;
+  }
+
+  &:disabled {
+    color: gray;
+    cursor: not-allowed;
+  }
+}
+
+/* Tooltip para o ícone de troca de tema */
+.right-items .theme-icon[mattooltip] {
+  cursor: pointer;
+  color: white; // Cor padrão para o ícone de tema
+}
+
+body.dark-theme .theme-icon {
+  color: #fff; // A cor do ícone de tema escuro (lua) quando o tema escuro está ativo
+}
+
+body.light-theme .theme-icon {
+  color: #000; // A cor do ícone de tema claro (sol) quando o tema claro está ativo
+}
+
 .app-container {
   padding-bottom: 40px;
 }

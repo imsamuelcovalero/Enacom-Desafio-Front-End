@@ -1,8 +1,9 @@
-/* File: src/app/contact-page/contact-page.component.ts */
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CopyService } from '../services/copy.service';
 import { ToastrService } from 'ngx-toastr';
+import { SuccessMessageService } from '../services/success-message.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-page',
@@ -15,7 +16,9 @@ export class ContactPageComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private copyService: CopyService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private successMessageService: SuccessMessageService,
+    private router: Router
   ) {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -26,18 +29,25 @@ export class ContactPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // sem código no momento
+    const successMessage = this.successMessageService.message;
+    if (successMessage) {
+      this.toastr.success(successMessage);
+      this.successMessageService.message = null;
+    }
   }
 
   submitForm(): void {
     if (this.contactForm.valid) {
       // Aqui você pode implementar a lógica para enviar o formulário, talvez através de um serviço
       console.log(this.contactForm.value);
-      this.toastr.success('Your message has been sent successfully. We will get back to you soon!');
+      this.successMessageService.message = 'Sua mensagem foi enviada com sucesso. Nós iremos te retornar em breve!';
       this.contactForm.reset();
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['/contact']);
+      });
     } else {
       // Exibir erros de validação
-      this.toastr.error('Please fill out all required fields correctly.');
+      this.toastr.error('Por favor, preencha todos os campos necessários corretamente.');
     }
   }
 

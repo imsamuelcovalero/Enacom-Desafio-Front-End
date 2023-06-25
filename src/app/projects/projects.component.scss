@@ -5,7 +5,15 @@
   flex-direction: column;
   justify-content: flex-start;
   height: 100vh;
-  margin-bottom: 60px; // Adicione esta linha para evitar que o rodapé cubra o conteúdo
+  margin-bottom: 60px;
+}
+
+mat-toolbar {
+  // margin-top: 20px;
+  height: 60px;
+  width: 100vw;
+  justify-content: center;
+  font-size: 1.8em;
 }
 
 .projects-section {
@@ -18,11 +26,5 @@
 .toolbar-content {
   display: inline-block;
   height: 60px;
-  line-height: 60px; // Adicione esta linha para centralizar verticalmente o texto
+  line-height: 60px;
 }
-
-// mat-toolbar {
-//   display: flex;
-//   justify-content: center;
-//   // margin-top: 60px;
-// }

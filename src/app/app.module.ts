@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, ExtraOptions } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
@@ -39,6 +40,10 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 
+const routerOptions: ExtraOptions = {
+  onSameUrlNavigation: 'reload',
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +61,7 @@ import { HomeComponent } from './home/home.component';
     ProjectWrapperComponent,
     ContactPageComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,7 +83,8 @@ import { HomeComponent } from './home/home.component';
     NgbModule,
     MatSnackBarModule,
     HttpClientModule,
-    MatTooltipModule
+    MatTooltipModule,
+    RouterModule.forRoot([], routerOptions),
   ],
   providers: [],
   bootstrap: [AppComponent]

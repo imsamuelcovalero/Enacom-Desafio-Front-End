@@ -1,7 +1,7 @@
 <!-- File: src/app/contact-page/contact-page.component.html -->
 <div class="contact-container">
   <mat-toolbar color="primary">
-    <span>Contact Me</span>
+    <span>Me Contacte</span>
   </mat-toolbar>
 
   <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form">
@@ -38,7 +38,7 @@
       </mat-error>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">Submit</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">Enviar</button>
   </form>
 
   <div class="contact-info">

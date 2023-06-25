@@ -1,12 +1,20 @@
 /* File: src/app/experiences/experiences.component.scss */
 .experience-external-container {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto;
+}
+
+mat-toolbar {
+  // margin-top: 20px;
+  height: 60px;
+  width: 100vw;
+  justify-content: center;
+  font-size: 1.8em;
 }
 
 .experience-container {
