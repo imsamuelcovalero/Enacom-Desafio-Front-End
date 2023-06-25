@@ -26,7 +26,7 @@ $dark-theme: mat-dark-theme((color: (primary: $dark-primary,
   --primary: #58637E;
   --accent: #F5A962;
   --accent-hover: #ED8A47;
-  --background: #F8F8F8;
+  --background: #f8f5f2;
   --headline: #1F2933;
   --paragraph: #4B5563;
   --button-border: #4B5563;
@@ -72,8 +72,8 @@ body.dark-theme {
   --extra: #C084FC;
   --table-border: #6B7280;
   --text-title: #D1D5DB;
-  --card-background: #1F2933;
-  --header-background: #7C3AED;
+  --card-background: #262B34;
+  --header-background: #4B5563;
   --header-text: #D1D5DB;
 }
 
