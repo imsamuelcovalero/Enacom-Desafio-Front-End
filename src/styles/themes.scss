@@ -36,14 +36,13 @@ $dark-theme: mat-dark-theme((color: (primary: $dark-primary,
   --button-active: #3730A3;
   --button-disabled-background: #CBD5E1;
   --input-background: #FFFFFF;
-  --input-border: #E5E7EB;
+  --input-border: #ccc;
   --input-text: #1F2933;
   --input-focus-border: #6366F1;
   --nav-list-border: #4B5563;
-  --border: #000000;
   --tertiary: #EF4444;
   --extra: #A78BFA;
-  --table-border: #E5E7EB;
+  --table-border: #ccc;
   --text-title: #1F2933;
   --card-background: #FFFFFF;
   --header-background: #1A202C;
@@ -69,7 +68,6 @@ body.dark-theme {
   --input-text: #D1D5DB;
   --input-focus-border: #7C3AED;
   --nav-list-border: #9CA3AF;
-  --border: #808080;
   --tertiary: #EF4444;
   --extra: #C084FC;
   --table-border: #6B7280;

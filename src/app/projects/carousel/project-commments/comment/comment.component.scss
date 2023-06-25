@@ -1,6 +1,6 @@
 /* File: src/app/project-comments/comment/comment.component.scss */
 .comment {
-  border: 1px solid #ccc;
+  // border: 1px solid var(--table-border);
   padding: 20px;
   margin: 10px 0;
   display: flex;
@@ -14,12 +14,12 @@
   }
 
   p:first-child {
-    font-size: 1.2em;
-    color: #333;
+    font-size: 1em;
+    color: var(--text-title);
     margin-bottom: 10px;
   }
 
   p:last-child {
-    color: #777;
+    color: var(--paragraph);
   }
 }

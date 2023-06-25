@@ -1,12 +1,11 @@
 /* File: src/app/carousel/carousel.component.scss */
 .carousel {
-  // border: 1px solid green;
   position: relative;
   width: 90%;
   margin: 0 auto;
+  background-color: var(--background);
 
   .carousel-inner {
-    // border: 1px solid blue;
     position: relative;
     margin: 0 auto;
     width: 90%;
@@ -22,7 +21,7 @@
   .carousel-control-next {
     width: 50px;
     height: 50px;
-    background: blue;
+    background: var(--extra);
     border-radius: 50%;
     border: none;
     position: absolute;
@@ -32,22 +31,21 @@
     justify-content: center;
     z-index: 2;
 
-    &.carousel-control-prev {
-      left: 10px;
-    }
-
-    &.carousel-control-next {
-      right: 10px;
-    }
-
     &:hover {
-      background: rgba(0, 0, 0, 0.8);
+      background: var(--tertiary);
     }
   }
 
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
   .carousel-indicators {
-    // border: 1px solid green;
-    position: relative; // Adicione esta linha
+    position: relative;
     bottom: 65px;
     left: 50%;
     transform: translateX(-50%);
@@ -56,28 +54,17 @@
     justify-content: center;
   }
 
-  // .carousel-indicators {
-  //   // border: 1px solid green;
-  //   bottom: 40px;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   margin: auto;
-  //   // margin-top: 20px;
-  //   display: flex;
-  //   justify-content: center;
-  // }
-
   .carousel-indicators button {
     width: 10px;
     height: 10px;
     margin: 0 5px;
     border: none;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: var(--button-border);
     cursor: pointer;
   }
 
   .carousel-indicators button.active {
-    background-color: blue;
+    background-color: var(--tertiary);
   }
 }

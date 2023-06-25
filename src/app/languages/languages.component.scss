@@ -43,7 +43,7 @@ mat-toolbar {
 }
 
 .skills-section:not(:first-child) {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--nav-list-border);
 }
 
 .skills-section {
@@ -93,7 +93,7 @@ mat-toolbar {
 
   /* Adicionando os estilos para imitar o mat-card */
   padding: 15px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--nav-list-border);
   border-radius: 4px;
   background-color: var(--card-background);
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -114,7 +114,7 @@ mat-toolbar {
 
   /* Adicionando os estilos para imitar o mat-card */
   padding: 15px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--nav-list-border);
   border-radius: 4px;
   background-color: var(--card-background);
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -174,7 +174,7 @@ strong {
   justify-content: center;
   gap: 20px;
   padding-top: 20px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--nav-list-border);
   width: 50%;
   min-width: 300px;
   margin: auto;
