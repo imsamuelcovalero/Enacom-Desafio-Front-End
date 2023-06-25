@@ -1,5 +1,5 @@
 /* File: src/app/helpers/localStorage.helper.ts */
-import { IComment } from "src/app/interfaces/project.interface";
+import { IComment } from "../interfaces/project.interface";
 
 
 export class LocalStorageHelper {

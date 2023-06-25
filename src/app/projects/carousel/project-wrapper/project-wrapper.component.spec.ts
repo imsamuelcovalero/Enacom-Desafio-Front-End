@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Input, Directive } from '@angular/core';
 import { ProjectWrapperComponent } from './project-wrapper.component';
-import { IProject } from 'src/app/interfaces/project.interface';
+import { IProject } from 'src/interfaces/project.interface';
 
 // Mock components
 @Directive({
