@@ -10,7 +10,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { SuccessMessageService } from '../services/success-message.service';
 
 import { ContactPageComponent } from './contact-page.component';
-import { of } from 'rxjs';
 
 describe('ContactPageComponent', () => {
   let component: ContactPageComponent;

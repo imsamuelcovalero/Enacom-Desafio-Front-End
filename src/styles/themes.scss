@@ -1,0 +1,89 @@
+// File: src/styles/themes.scss
+@import '@angular/material/theming';
+
+// Definindo a paleta de cores para os temas claros e escuros utilizando paletas predefinidas do Angular Material
+$light-primary: mat-palette($mat-light-blue);
+$light-accent: mat-palette($mat-orange, 700, A200, A400); // '#f45d48' se aproxima de $mat-orange 700
+$light-warn: mat-palette($mat-red);
+
+$dark-primary: mat-palette($mat-blue-gray);
+$dark-accent: mat-palette($mat-amber, 500, A200, A400); // '#f25f4c' se aproxima de $mat-amber 500
+$dark-warn: mat-palette($mat-red);
+
+// Cria os temas claro e escuro
+$light-theme: mat-light-theme((color: (primary: $light-primary,
+        accent: $light-accent,
+        warn: $light-warn,
+      )));
+
+$dark-theme: mat-dark-theme((color: (primary: $dark-primary,
+        accent: $dark-accent,
+        warn: $dark-warn,
+      )));
+
+:root {
+  /* Tema claro */
+  --primary: #58637E;
+  --accent: #F5A962;
+  --accent-hover: #ED8A47;
+  --background: #F8F8F8;
+  --headline: #1F2933;
+  --paragraph: #4B5563;
+  --button-border: #4B5563;
+  --button-text: #1F2933;
+  --button-background: #6366F1;
+  --button-hover: #4338CA;
+  --button-active: #3730A3;
+  --button-disabled-background: #CBD5E1;
+  --input-background: #FFFFFF;
+  --input-border: #E5E7EB;
+  --input-text: #1F2933;
+  --input-focus-border: #6366F1;
+  --tertiary: #EF4444;
+  --extra: #A78BFA;
+  --table-border: #E5E7EB;
+  --text-title: #1F2933;
+  --card-background: #FFFFFF;
+  --header-background: #1A202C;
+  --header-text: #F8F8F8;
+}
+
+body.dark-theme {
+  /* Tema escuro */
+  --primary: #9CA3AF;
+  --accent: #F97316;
+  --accent-hover: #EA580C;
+  --background: #1F2933;
+  --headline: #F8F8F8;
+  --paragraph: #D1D5DB;
+  --button-border: #D1D5DB;
+  --button-text: #F8F8F8;
+  --button-background: #7C3AED;
+  --button-hover: #6D28D9;
+  --button-active: #5B21B6;
+  --button-disabled-background: #374151;
+  --input-background: #4B5563;
+  --input-border: #6B7280;
+  --input-text: #D1D5DB;
+  --input-focus-border: #7C3AED;
+  --tertiary: #EF4444;
+  --extra: #C084FC;
+  --table-border: #6B7280;
+  --text-title: #D1D5DB;
+  --card-background: #1F2933;
+  --header-background: #7C3AED;
+  --header-text: #D1D5DB;
+  --header-background: #6EE7B7;
+  --header-text: #1F2933;
+}
+
+// Define uma classe para cada tema
+.light-theme {
+  @include angular-material-theme($light-theme);
+  // background-color: var(--background); // apenas para teste
+}
+
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+  // background-color: var(--background); // apenas para teste
+}
