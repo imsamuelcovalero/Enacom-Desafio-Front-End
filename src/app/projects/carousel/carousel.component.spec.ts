@@ -3,7 +3,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { By } from '@angular/platform-browser';
 import { Input, Directive } from '@angular/core';
 import { CarouselComponent } from './carousel.component';
-import { IProject } from 'src/interfaces/project.interface';
+import { IProject } from 'src/app/interfaces/project.interface';
 
 // Mock components
 @Directive({

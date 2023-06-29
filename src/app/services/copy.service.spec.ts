@@ -1,18 +1,18 @@
 import { TestBed } from '@angular/core/testing';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 import { CopyService } from './copy.service';
 
 describe('CopyService', () => {
   let service: CopyService;
-  let snackBar: MatSnackBar;
+  let toastr: ToastrService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [MatSnackBarModule]
+      imports: [ToastrModule.forRoot()]  // Adicione ToastrModule ao TestBed
     });
     service = TestBed.inject(CopyService);
-    snackBar = TestBed.inject(MatSnackBar);
+    toastr = TestBed.inject(ToastrService);  // Injete ToastrService em vez de MatSnackBar
   });
 
   it('should be created', () => {
@@ -22,16 +22,14 @@ describe('CopyService', () => {
   it('should copy text and show a message', (done) => {
     const text = 'Test text';
     const message = 'Message test';
-    const snackBarSpy = spyOn(snackBar, 'open').and.stub();
+    const toastrSpy = spyOn(toastr, 'success').and.stub();  // Altere para espionar o método 'success' do ToastrService
     const clipboardSpy = spyOn(navigator.clipboard, 'writeText').and.returnValue(Promise.resolve());
 
     service.copyText(text, message);
 
     setTimeout(() => {
       expect(clipboardSpy).toHaveBeenCalledWith(text);
-      expect(snackBarSpy).toHaveBeenCalledWith(message, 'Close', {
-        duration: 2000,
-      });
+      expect(toastrSpy).toHaveBeenCalledWith(message);  // Não estamos mais passando argumentos adicionais para o método 'success'
       done();
     }, 1000);
   });

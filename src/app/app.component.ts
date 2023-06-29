@@ -14,6 +14,7 @@ export class AppComponent implements OnDestroy {
   currentPage = '';
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router) {
+    /* o método 'pipe' permite manipular e processar fluxos de dados de maneira expressiva e compreensível, encadeando operações em um estilo de programação declarativa. */
     this.router.events.pipe(
       filter((event: Event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
@@ -22,7 +23,7 @@ export class AppComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
-    // Implemente aqui a lógica para cancelar as inscrições, caso tenha alguma.
+    // Sem código ainda
   }
 
   ngOnInit() {

@@ -1,7 +1,7 @@
 /* File: src/app/project-comments/comment-list/comment-list.component.spec.ts */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommentListComponent } from './comment-list.component';
-import { IComment } from 'src/interfaces/project.interface';
+import { IComment } from 'src/app/interfaces/project.interface';
 import { Component, Input } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
